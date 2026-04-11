@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAWDA | Professional Websites in 48 Hours</title>
+    <meta name="description" content="Get a professionally designed website in 48 hours or less. Purely online, highly affordable web design agency.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#a225b9',
+                        primaryHover: '#8b1f9e',
+                        dark: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <style>
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+    </style>
+</head>
+<body class="font-sans text-slate-700 antialiased bg-white selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+            <a href="https://cawdacreates.com" class="flex items-center gap-2.5">
+                <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/ba6cadea-1ba3-4716-a81f-4993e2972a9c/1774984124368-uptrrt.jpg" alt="CAWDA Logo" class="h-8 w-auto">
+                <span class="font-heading font-bold text-2xl text-dark tracking-tight">CAWDA</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#features" class="hover:text-primary transition-colors">Why Us</a>
+                <a href="#process" class="hover:text-primary transition-colors">How It Works</a>
+                <a href="#pricing" class="hover:text-primary transition-colors">Pricing</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-white font-medium rounded-full hover:bg-primaryHover transition-colors shadow-lg shadow-primary/25">
+                Start Your Project
+            </a>
+
+            <button class="md:hidden text-dark" aria-label="Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <div class="max-w-2xl animate-on-scroll">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 border border-primary/20">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        100% Online Agency
+                    </div>
+                    <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-extrabold text-dark leading-[1.1] mb-6 tracking-tight">
+                        Professional Websites in <span class="text-primary relative whitespace-nowrap">
+                            48 Hours.
+                            <svg class="absolute w-full h-3 -bottom-1 left-0 text-primary/30" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="4" fill="none" />
+                            </svg>
+                        </span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-xl">
+                        Stop overpaying large corporate agencies and waiting months. Get a stunning, high-converting website built fast, at a fraction of the cost.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-primaryHover transition-all hover:scale-105 shadow-xl shadow-primary/25 text-lg">
+                            Get Started Now
+                            <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                        </a>
+                        <div class="flex items-center gap-3 px-4 py-2">
+                            <i data-lucide="clock" class="w-5 h-5 text-primary"></i>
+                            <span class="text-sm font-medium text-slate-500">Delivery guaranteed<br>under 48 hours</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative lg:ml-auto animate-on-scroll delay-200">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/50 border border-slate-100 bg-white p-2">
+                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/ba6cadea-1ba3-4716-a81f-4993e2972a9c/3c5c3eec-7faf-45b5-966d-7b5af303aa14.png" alt="Web Design Preview" class="w-full h-auto rounded-xl object-cover">
+                        
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Project Status</p>
+                                <p class="font-heading font-bold text-dark">Ready to Launch</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">Why Choose CAWDA?</h2>
+                <p class="text-lg text-slate-600">We stripped away the corporate bloat to give you exactly what you need: a beautiful website, delivered fast, at an unbeatable price.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow animate-on-scroll delay-100">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="w-7 h-7 text-primary"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-dark mb-3">Lightning Fast</h3>
+                    <p class="text-slate-600 leading-relaxed">No more waiting weeks or months. From brief to launch, your custom website is ready in 48 hours or less.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow animate-on-scroll delay-200">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="piggy-bank" class="w-7 h-7 text-primary"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-dark mb-3">Radically Affordable</h3>
+                    <p class="text-slate-600 leading-relaxed">By operating purely online and optimizing our workflow, we pass the massive savings directly to you.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow animate-on-scroll delay-300">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="gem" class="w-7 h-7 text-primary"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-dark mb-3">Premium Quality</h3>
+                    <p class="text-slate-600 leading-relaxed">Speed doesn't mean compromising on quality. You get modern, responsive, and conversion-optimized designs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2 animate-on-scroll">
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-6">How We Build It in 48 Hours</h2>
+                    <p class="text-lg text-slate-600 mb-8">Our streamlined, purely online process eliminates unnecessary meetings and delays, allowing us to focus entirely on building your site.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-50 border-2 border-primary flex items-center justify-center font-heading font-bold text-primary text-xl">1</div>
+                            <div>
+                                <h4 class="font-heading text-xl font-bold text-dark mb-2">Submit Your Requirements</h4>
+                                <p class="text-slate-600">Fill out our quick online brief. Tell us about your business, brand colors, and what you need the site to do.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-slate-50 border-2 border-primary flex items-center justify-center font-heading font-bold text-primary text-xl">2</div>
+                            <div>
+                                <h4 class="font-heading text-xl font-bold text-dark mb-2">The 48-Hour Sprint</h4>
+                                <p class="text-slate-600">Our expert designers get to work immediately. We build, code, and optimize your site for all devices.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center font-heading font-bold text-white text-xl">3</div>
+                            <div>
+                                <h4 class="font-heading text-xl font-bold text-dark mb-2">Review & Launch</h4>
+                                <p class="text-slate-600">We send you the preview. We make any final tweaks, connect your domain, and push your new site live!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 animate-on-scroll delay-200">
+                    <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/ba6cadea-1ba3-4716-a81f-4993e2972a9c/09c0e04c-d650-4f58-8bb1-e08f98d57c45.png" alt="Our Process" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / CTA Banner -->
+    <section id="pricing" class="py-20 bg-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 animate-on-scroll">
+            <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6">Stop Overpaying for Web Design</h2>
+            <p class="text-xl text-slate-300 mb-10">Corporate agencies charge thousands and take months. We deliver agency-quality websites in 48 hours for a fraction of the cost. Purely online. Highly efficient.</p>
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-2xl max-w-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-left">
+                    <p class="text-slate-300 font-medium mb-1">Starting at just</p>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-4xl md:text-5xl font-heading font-bold text-white">Affordable</span>
+                        <span class="text-primary font-medium">Rates</span>
+                    </div>
+                </div>
+                <a href="#contact" class="w-full md:w-auto px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primaryHover transition-colors text-center shadow-lg shadow-primary/30">
+                    Get a Quote Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
+            <div class="animate-on-scroll">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-dark mb-4">Let's Build It.</h2>
+                <p class="text-slate-600 mb-10">Ready to get your professional website online in the next 48 hours? Reach out to us directly by phone or email.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-6 text-left">
+                    <a href="tel:+17059947249" class="flex-1 flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition-all border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="phone" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-dark uppercase tracking-wider mb-1">Call Us</p>
+                            <p class="text-primary font-medium text-lg">+1 (705) 994-7249</p>
+                        </div>
+                    </a>
+                    
+                    <a href="mailto:cawdacreates@gmail.com" class="flex-1 flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition-all border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-dark uppercase tracking-wider mb-1">Email Us</p>
+                            <p class="text-primary font-medium text-lg">cawdacreates@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/ba6cadea-1ba3-4716-a81f-4993e2972a9c/1774984124368-uptrrt.jpg" alt="CAWDA Logo" class="h-6 w-auto">
+                    <span class="font-heading font-bold text-xl text-dark tracking-tight">CAWDA</span>
+                </div>
+                
+                <div class="flex items-center gap-6 text-sm text-slate-500 font-medium">
+                    <a href="tel:+17059947249" class="hover:text-primary transition-colors">+1 (705) 994-7249</a>
+                    <a href="mailto:cawdacreates@gmail.com" class="hover:text-primary transition-colors">cawdacreates@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-100 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <p>&copy; 2024 CAWDA Web Design. All rights reserved.</p>
+                <a href="https://cawdacreates.com" class="hover:text-primary transition-colors font-medium">cawdacreates.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Scroll Animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Contact Form Submission (Automatic Send)
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        const submitBtn = document.getElementById('submit-btn');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const originalHtml = submitBtn.innerHTML;
+                submitBtn.innerHTML = 'Sending...';
+                submitBtn.disabled = true;
+                
+                try {
+                    const formData = new FormData(contactForm);
+                    const response = await fetch('https://zgnpmogdjnnhpwewavnr.supabase.co/functions/v1/contact-form-submit', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            projectId: '{{PROJECT_ID}}',
+                            name: formData.get('name'),
+                            email: formData.get('email'),
+                            message: formData.get('message')
+                        })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (response.ok) {
+                        formStatus.textContent = 'Message sent successfully!';
+                        formStatus.className = 'text-sm text-green-600 text-center font-medium mt-4';
+                        contactForm.reset();
+                    } else {
+                        formStatus.textContent = data.error || 'Failed to send message.';
+                        formStatus.className = 'text-sm text-red-600 text-center font-medium mt-4';
+                    }
+                } catch (error) {
+                    formStatus.textContent = 'Network error. Please try again.';
+                    formStatus.className = 'text-sm text-red-600 text-center font-medium mt-4';
+                } finally {
+                    submitBtn.innerHTML = originalHtml;
+                    submitBtn.disabled = false;
+                    lucide.createIcons();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
