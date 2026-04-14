@@ -363,11 +363,10 @@
         'Content-Type': 'application/json',
         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwY3F1eG1uaXlma3R3bml1ZHdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxMjA5MjYsImV4cCI6MjA5MTY5NjkyNn0.U-PxvQcCCyoV7CRJ-1Hx_v9QypwW_T0pfYBQ-huAs80'
     },
- body: JSON.stringify({
-    projectId: 'cpcquxmniyfktwniudwq',
-    name: formData.get('name'),
-    email: formData.get('email'),
-    message: formData.get('message')
+body: JSON.stringify({
+    to: formData.get('email'),
+    subject: 'New Contact Form Message from ' + formData.get('name'),
+    html: '<p><strong>Name:</strong> ' + formData.get('name') + '</p><p><strong>Email:</strong> ' + formData.get('email') + '</p><p><strong>Message:</strong> ' + formData.get('message') + '</p>'
 })
 });
                     
