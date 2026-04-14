@@ -50,7 +50,7 @@
         .delay-300 { transition-delay: 300ms; }
     </style>
 </head>
-<body class="font-sans text-slate-200 antialiased bg-gradient-to-br from-primary to-secondary selection:bg-primary selection:text-white">
+<body class="font-sans text-slate-200 antialiased bg-gradient-to-br from-dark to-black selection:bg-primary selection:text-white">
 
     <!-- Navigation -->
     <header class="fixed w-full top-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
@@ -67,7 +67,7 @@
                 <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
             </nav>
 
-            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-white font-medium rounded-full hover:bg-primaryHover transition-colors shadow-lg shadow-primary/25">
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-white text-primary font-medium rounded-full hover:bg-slate-200 transition-colors shadow-lg shadow-white/10">
                 Start Your Project
             </a>
 
@@ -106,7 +106,7 @@
                         Stop overpaying large corporate agencies and waiting months. Get a stunning, high-converting website built fast, at a fraction of the cost.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-primaryHover transition-all hover:scale-105 shadow-xl shadow-primary/25 text-lg">
+                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-slate-200 transition-all hover:scale-105 shadow-xl shadow-white/15 text-lg">
                             Get Started Now
                             <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
                         </a>
@@ -234,7 +234,7 @@
                         <span class="text-primary font-medium">Rates</span>
                     </div>
                 </div>
-                <a href="#contact" class="w-full md:w-auto px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primaryHover transition-colors text-center shadow-lg shadow-primary/30">
+                <a href="#contact" class="w-full md:w-auto px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-slate-200 transition-colors text-center shadow-lg shadow-white/15">
                     Get a Quote Now
                 </a>
             </div>
@@ -243,13 +243,36 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-24 border-t border-white/10">
-        <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
-            <div class="animate-on-scroll">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8">
+            <div class="animate-on-scroll text-center">
                 <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">Let's Build It.</h2>
-                <p class="text-slate-200 mb-10">Ready to get your professional website online in the next 48 hours? Reach out to us directly by phone or email.</p>
-                
-                <div class="flex flex-col sm:flex-row justify-center gap-6 text-left">
-                    <a href="tel:+17059947249" class="flex-1 flex items-start gap-4 p-6 rounded-2xl bg-white/10 backdrop-blur-sm shadow-lg shadow-black/20 hover:shadow-xl transition-all border border-white/10">
+                <p class="text-slate-200 mb-12 max-w-2xl mx-auto">Ready to get your professional website online in the next 48 hours? Fill out the form below or reach out to us directly.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <form id="contact-form" class="space-y-6 animate-on-scroll" novalidate>
+                    <div>
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Your Email Address" required class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none">
+                    </div>
+                    <div>
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea name="message" id="message" rows="5" placeholder="Tell us about your project..." required class="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" id="submit-btn" class="w-full flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-slate-200 transition-colors shadow-lg shadow-white/10 text-lg">
+                            Send Your Brief
+                            <i data-lucide="send" class="ml-2 w-5 h-5"></i>
+                        </button>
+                    </div>
+                    <div id="form-status" class="text-center h-4"></div>
+                </form>
+                <div class="space-y-6 animate-on-scroll delay-200">
+                    <p class="text-slate-200 text-center md:text-left">Or contact us directly:</p>
+                    <a href="tel:+17059947249" class="flex items-start gap-4 p-6 rounded-2xl bg-white/10 backdrop-blur-sm shadow-lg shadow-black/20 hover:shadow-xl transition-all border border-white/10">
                         <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                             <i data-lucide="phone" class="w-6 h-6 text-primary"></i>
                         </div>
@@ -258,8 +281,7 @@
                             <p class="text-primary font-medium text-lg">+1 (705) 994-7249</p>
                         </div>
                     </a>
-                    
-                    <a href="mailto:cawdacreates@gmail.com" class="flex-1 flex items-start gap-4 p-6 rounded-2xl bg-white/10 backdrop-blur-sm shadow-lg shadow-black/20 hover:shadow-xl transition-all border border-white/10">
+                    <a href="mailto:cawdacreates@gmail.com" class="flex items-start gap-4 p-6 rounded-2xl bg-white/10 backdrop-blur-sm shadow-lg shadow-black/20 hover:shadow-xl transition-all border border-white/10">
                         <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                             <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
                         </div>
@@ -350,15 +372,15 @@
                     
                     if (response.ok) {
                         formStatus.textContent = 'Message sent successfully!';
-                        formStatus.className = 'text-sm text-green-600 text-center font-medium mt-4';
+                        formStatus.className = 'text-sm text-green-400 text-center font-medium mt-4';
                         contactForm.reset();
                     } else {
                         formStatus.textContent = data.error || 'Failed to send message.';
-                        formStatus.className = 'text-sm text-red-600 text-center font-medium mt-4';
+                        formStatus.className = 'text-sm text-red-400 text-center font-medium mt-4';
                     }
                 } catch (error) {
                     formStatus.textContent = 'Network error. Please try again.';
-                    formStatus.className = 'text-sm text-red-600 text-center font-medium mt-4';
+                    formStatus.className = 'text-sm text-red-400 text-center font-medium mt-4';
                 } finally {
                     submitBtn.innerHTML = originalHtml;
                     submitBtn.disabled = false;
