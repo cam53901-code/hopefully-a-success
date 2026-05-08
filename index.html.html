@@ -274,7 +274,6 @@
                             Send Message
                             <i data-lucide="send" class="w-4 h-4"></i>
                         </button>
-                       <p id="form-status" class="text-center mt-4 font-medium"></p> 
                     </form>
                 </div>
 
@@ -350,44 +349,11 @@
         document.querySelectorAll('.animate-on-scroll').forEach((element) => {
             observer.observe(element);
         });
-        
-    var form = document.getElementById("contact-form");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("form-status");
-      var btn = document.getElementById("submit-button");
-      var data = new FormData(event.target);
-
-      btn.innerHTML = "Sending...";
-      btn.disabled = true;
-
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          status.innerHTML = "Success! Your message has been sent.";
-          status.style.color = "#4ade80";
-          form.reset();
-        } else {
-          status.innerHTML = "Oops! There was a problem. Please try again.";
-          status.style.color = "#f87171";
-        }
-        btn.innerHTML = "Send Message";
-        btn.disabled = false;
-      }).catch(error => {
-        status.innerHTML = "Error: Check your internet connection.";
-        status.style.color = "#f87171";
-        btn.innerHTML = "Send Message";
-        btn.disabled = false;
-      });
-    }
-    
-    form.addEventListener("submit", handleSubmit)
 </script>
 </body>
 </html>
+
+
+
+
+//
