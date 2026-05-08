@@ -252,10 +252,10 @@
             <div class="grid md:grid-cols-2 gap-12 items-start">
                 <div class="animate-on-scroll">
                      <!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-                    in the following 3 lines after this message, the first one was adjusted, the second and third were pasted directly in. They weren't there before, but are required for proper function
+                    In the following 3 lines after this message, the first one was adjusted, the second and third were pasted directly in. They weren't there before, but are required for proper function
                     value of the lines determines the email the message is sent to and what the subject name of the email is-->
                    <form id="contact-form" action="https://formspree.io/f/xaqaqkpb" method="POST" class="space-y-5 bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 shadow-lg shadow-black/20">
-                        <input type="hidden" name="_subject" value="New cawda testsite Contact Form Submission">
+                        <input type="hidden" name="_subject" value="New Official CAWDA Contact Form Submission">
                         <input type="hidden" name="_replyto" value="cawdacreates@gmail.com">
                      <!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW-->
                         <div>
@@ -302,7 +302,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+   <!-- Footer -->
     <footer class="border-t border-white/10 py-12">
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -324,8 +324,6 @@
         </div>
     </footer>
 
-    <!--WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW 
-    Scripts, everything in between the " lucide.createIcons();" line and the last script block was pasted, and can be pasted replacing everything in its place -->
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
@@ -349,7 +347,46 @@
         document.querySelectorAll('.animate-on-scroll').forEach((element) => {
             observer.observe(element);
         });
-</script>
+
+        // Contact Form - Stop Redirect
+        var form = document.getElementById("contact-form");
+        var btn = document.getElementById("submit-button");
+        var status = document.getElementById("form-status");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var data = new FormData(event.target);
+
+            btn.innerHTML = "Sending...";
+            btn.disabled = true;
+
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Success! Your message has been sent.";
+                    status.style.color = "#4ade80";
+                    form.reset();
+                } else {
+                    status.innerHTML = "Oops! There was a problem. Please try again.";
+                    status.style.color = "#f87171";
+                }
+                btn.innerHTML = "Send Message";
+                btn.disabled = false;
+            }).catch(error => {
+                status.innerHTML = "Error connecting to the server.";
+                status.style.color = "#f87171";
+                btn.innerHTML = "Send Message";
+                btn.disabled = false;
+            });
+        }
+
+        form.addEventListener("submit", handleSubmit);
+    </script>
 </body>
 </html>
 
